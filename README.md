@@ -227,7 +227,7 @@ Ahora que conoces los componentes básicos de un workflow en GitHub Actions pode
   TBD-step-3-notes.
 -->
 
-<details id=3 open>
+<details id=3>
 <summary><h2>Paso 3: Aprende a usar Expresiones</h2></summary>
 
 _¡Buen trabajo usando los distintos eventos para lanzar nuevos workflows! :sparkles:_
