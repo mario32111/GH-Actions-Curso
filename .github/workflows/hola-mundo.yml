@@ -1,11 +1,9 @@
 name: Hola-mundo
 
-on:
-  push:
-    branches: [ "main" ]
+on: [push]
 
 jobs:
-  platzi:
+  hola-mundo:
     runs-on: ubuntu-latest
 
     steps:
