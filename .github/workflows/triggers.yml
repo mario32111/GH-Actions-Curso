@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 name: Hola-mundo
 
+=======
+name: triggers
+run-name: esta es una prueba de un workflow con varios triggers
+>>>>>>> aprendiendo-github-actions
 on:
   push:
     branches: 

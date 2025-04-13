@@ -1,0 +1,48 @@
+name: expresiones
+run-name: estoy aprendiendo a usar logica dentro de los workflows
+
+on:
+  workflow_dispatch: 
+    inputs:
+      nombre:
+        description: 'Nombre del usuario'
+        required: true
+        default: 'Mundo'
+      edad:
+        description: 'Edad del usuario'
+        required: true
+        default: '0'
+      pais: 
+        description: 'Pais del usuario'
+        required: true
+        default: 'Desconocido'
+
+jobs:
+  nameValid:
+    if: ${{ inputs.nombre == 'Goku' || inputs.nombre == 'Vegeta' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: mostrar mensaje sobre el nombre
+        run: echo "Ese nombre es muy común, pero no es el nombre de un dios"
+
+  mostrarMayor:
+    if: ${{ inputs.edad > 18 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: mostrar mensaje para mayores de edad
+        run: echo "Eres mayor de edad, puedes entrar a la fiesta"
+
+  mostrarMenor:
+    if: ${{ inputs.edad < 18 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: mostrar mensaje para menores de edad
+        run: echo "Eres menor de edad, no puedes entrar a la fiesta"    
+
+
+  mostrarPais:
+    if: ${{ inputs.pais == 'Mexico' || inputs.pais == 'Argentina' }}
+    runs-on: ubuntu-latest
+    steps:
+        - name: mostrar mensaje para paises
+          run: echo "Eres de un pais latinoamericano, bienvenido a la fiesta"
