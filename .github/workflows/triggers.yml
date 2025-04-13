@@ -21,7 +21,7 @@ on:
             - '**.js'
 
 jobs:
-  hola-mundo:
+  hola-mundo-nuevo-con-mas-triggers:
     runs-on: ubuntu-latest
 
     steps:
