@@ -1,5 +1,5 @@
 name: Hola-mundo
-
+run-name: esta es una prueba de un workflow con varios triggers
 on:
   push:
     branches: 
