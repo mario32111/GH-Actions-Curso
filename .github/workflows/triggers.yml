@@ -1,0 +1,37 @@
+name: Hola-mundo
+
+on:
+  push:
+    branches: 
+      - main
+
+  issues:
+    types: 
+      - opened
+      - edited
+      - closed
+
+  pull_request: 
+        types: 
+            - opened
+            - labeled
+        branches: [ "releases/**" ]
+
+        paths: 
+            - '**.js'
+
+jobs:
+  hola-mundo-nuevo-con-mas-triggers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Run Hello World
+        run: node index.js
