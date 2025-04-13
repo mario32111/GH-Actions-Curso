@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: mostrar rama
-        run: echo "La rama es ${{ github.ref }}"
+        run: echo "La rama es ${{ github.ref }}, el commit es ${{ github.sha }} y el autor es ${{ github.actor }}"
         
