@@ -1,0 +1,12 @@
+name: contextos
+run-name: estoy aprendiendo a aprendiendo a usar contextos dentro de los workflows
+
+on: [push]
+
+
+jobs:
+  mostrarRama:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mostrar rama
+        run: echo "La rama es ${{ github.ref }}"
